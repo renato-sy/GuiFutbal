@@ -1,0 +1,99 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsbadkg83kkol"]
+
+[ext_resource type="Script" path="res://PartidoOnlie.gd" id="1_j7sr0"]
+[ext_resource type="Texture2D" uid="uid://r4rgvx4gf5n2" path="res://nuevo_menu_.png" id="2_shfsp"]
+[ext_resource type="Texture2D" uid="uid://bee52e6tma1hq" path="res://icon.svg" id="3_4yyxu"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j7sr0")
+
+[node name="NuevoMenu" type="Sprite2D" parent="."]
+position = Vector2(798, 362)
+texture = ExtResource("2_shfsp")
+
+[node name="Ligas" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 480.0
+offset_right = 255.0
+offset_bottom = 608.0
+scale = Vector2(3.23, 1.305)
+texture_normal = ExtResource("3_4yyxu")
+texture_pressed = ExtResource("3_4yyxu")
+
+[node name="Creditos" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 481.0
+offset_right = 678.0
+offset_bottom = 609.0
+scale = Vector2(3.23, 1.305)
+texture_normal = ExtResource("3_4yyxu")
+texture_pressed = ExtResource("3_4yyxu")
+
+[node name="Partido" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 117.0
+offset_right = 256.0
+offset_bottom = 245.0
+scale = Vector2(3.23, 1.305)
+texture_normal = ExtResource("3_4yyxu")
+texture_pressed = ExtResource("3_4yyxu")
+
+[node name="Tienda" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 300.0
+offset_right = 681.0
+offset_bottom = 428.0
+scale = Vector2(3.23, 1.305)
+texture_normal = ExtResource("3_4yyxu")
+texture_pressed = ExtResource("3_4yyxu")
+
+[node name="Eventos" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 119.0
+offset_right = 681.0
+offset_bottom = 247.0
+scale = Vector2(3.23, 1.305)
+texture_normal = ExtResource("3_4yyxu")
+texture_pressed = ExtResource("3_4yyxu")
+
+[node name="Entrenamiento" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 299.0
+offset_right = 258.0
+offset_bottom = 427.0
+scale = Vector2(3.23, 1.305)
+texture_normal = ExtResource("3_4yyxu")
+texture_pressed = ExtResource("3_4yyxu")
+
+[node name="Configuracion" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1473.0
+offset_top = 1.0
+offset_right = 1601.0
+offset_bottom = 129.0
+texture_normal = ExtResource("3_4yyxu")
+
+[node name="Perfil" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1347.0
+offset_top = 3.0
+offset_right = 1475.0
+offset_bottom = 131.0
+texture_normal = ExtResource("3_4yyxu")
+
+[connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="Tienda" to="." method="_on_tienda_pressed"]
+[connection signal="pressed" from="Configuracion" to="." method="_on_configuracion_pressed"]
+[connection signal="pressed" from="Perfil" to="." method="_on_perfil_pressed"]
